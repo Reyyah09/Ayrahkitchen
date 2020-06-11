@@ -1,0 +1,72 @@
+.header-main{
+    position: fixed;
+    width: 100%;
+    text-align: -webkit-center;
+    transition: all 0.8s ease 0s;
+    animation-name: fadeIn;
+    animation-duration: 3s;
+}
+.header-main ul{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 900px;
+    
+}
+.header-main li{
+    display: block;
+    text-transform: uppercase;
+    color: rgb(238, 238, 238);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+ 
+}
+@-webkit-keyframes slideIn {
+    from {bottom: -300px; opacity: 0.5} 
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @keyframes slideIn {
+    from {bottom: -300px; opacity: 0.5}
+    to {bottom: 0; opacity: 1}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    from {opacity: 0.5} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fadeIn {
+    from {opacity: 0.5} 
+    to {opacity: 1}
+  }
+.header-main2{
+    animation-name: fadeIn;
+    animation-duration: 3s;
+    position: fixed;
+    width: 100%;
+    text-align: -webkit-center;
+    background-color: rgb(38, 38, 38);
+    transition: all 0.8s ease 0s;
+}
+
+.header-main2 ul{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    width: 900px;
+    
+}
+.header-main2 li{
+    display: block;
+    text-transform: uppercase;
+    color: rgb(238, 238, 238);
+    font-weight: 400;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+ 
+}
+.test{
+    color: red!important;
+}

@@ -1,0 +1,21 @@
+.about-main-div {
+   padding-top: 120px;
+}
+.about-main-div .about-inner{
+    display: flex;
+}
+.about-main-div .about-inner .column-one{
+   background-image: url(../../images/banner-main.jpg);
+   height: 500px;
+   background-size: cover;
+   background-repeat: no-repeat;
+   flex: 1;
+   background-position: center;
+}
+.about-main-div .about-inner .column-two{
+   flex: 1;
+   background-color: gray;
+ }
+ .about-main-div .content-column-2{
+    padding: 80px 10px 0px 80px;
+  }
