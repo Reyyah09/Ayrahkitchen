@@ -158,7 +158,7 @@ export default () => {
                         </div>
                     </div>
                 </div>
-
+                                    <div className="container">
                                     <div className="row gallery-images">
                                         <div className="col-xs-6 col-md-3">
                                             <div className="gallery-item">
@@ -180,6 +180,7 @@ export default () => {
                                         <img  className="food-items" src={Img4} alt="gallery-item4" />
                                             </div>
                                         </div>
+                                    </div>
                                     </div>
             </div>
         </>

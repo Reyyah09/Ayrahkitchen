@@ -11,12 +11,12 @@ import Section5 from '../src/components/section5/section5'
 function App() {
   return (
     <>
-    {/* <Header />
+    <Header />
     <Section1 />
     <Section2 />
-    <Section3 /> */}
+    <Section3 />
     <Section4/>
-    {/* <Section5/> */}
+    <Section5/>
   </>
   );
 }
