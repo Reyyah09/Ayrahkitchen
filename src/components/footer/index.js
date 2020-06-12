@@ -1,10 +1,26 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './style.css'
+import Axios from 'axios'
+import {ApiForm} from '../../config'
 import Facebook from '../../images/facebook.png'
 import Twitter from '../../images/twitter.png'
 import Youtube from '../../images/youtube.png'
-export default ()=>{
 
+
+
+
+export default ()=>{
+    const [Name,setName]=useState("");
+    const [email,setEmail]=useState("");
+    const [message,setMessage]=useState("");
+    const postDetail=(event)=>{
+        event.preventDefault(event);
+        let payload={Name:Name, email:email, message:message}
+        Axios.post(ApiForm + '/api/contactform', payload).then(Response=>{
+            console.log(Response.data);
+            window.location.replace("/")
+        })
+    }
     return(
         <>
          <div className="footer-main">
@@ -36,19 +52,28 @@ export default ()=>{
                 
                 <div className="footer-title">SEND US A MESSAGE</div>
                 <hr className="footer-hr-line"></hr>
-                <form>
+                <form onSubmit={event=>postDetail(event)}>
                 <div className="footer-section">
                     <div className="footer-input">
-                <input className="footer-input-one" placeholder="Name"></input>
-                <input className="footer-input-two" placeholder="Email"></input>
+                <input className="footer-input-one" placeholder="Name"
+                value={Name}
+                onChange={event=>setName(event.target.value)}
+                ></input>
+                <input className="footer-input-two" placeholder="Email"
+                value={email}
+                onChange={event=>setEmail(event.target.value)}
+                ></input>
                 
                 </div>
                 </div>
                 <div className="footer-section">
-                <input className="footer-input-three" placeholder="Message"></input>
+                <input className="footer-input-three" placeholder="Message"
+                value={message}
+                onChange={event=>setMessage(event.target.value)}
+                ></input>
                 </div>
                 <div className="footer-section">
-                    <button className="footer-btn">SEND MESSAGE</button>
+                    <button  className="footer-btn" type="submit">SEND MESSAGE</button>
                 </div>
                 </form>
                 <div className="footer-section-end">
